@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SliderContainer extends Component {
-
-  render() {
-    return (
-      <div></div>
-    );
-  }
-
+const SliderContainer = () => {
+  return (
+    <div></div>
+  );
 }
 
 export default SliderContainer;
