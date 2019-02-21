@@ -10,3 +10,20 @@
 #title {
   font-size: 3vw
 }
+
+#mapContainer {
+  border: 3px solid red
+}
+
+#sliderContainer {
+  border: 3px solid purple
+}
+
+#mainContainer {
+  border: 3px solid green;
+
+}
+
+#logContainer {
+  border: 3px solid blue
+}
