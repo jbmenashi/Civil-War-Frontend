@@ -3,7 +3,7 @@
 }
 
 #titleDiv {
-  margin-top: 1vw;
+  margin-top: 0.5vw;
   font-family: 'Felipa', cursive;
 }
 
@@ -11,19 +11,22 @@
   font-size: 3vw
 }
 
-#mapContainer {
-  border: 3px solid red
-}
-
 #sliderContainer {
-  border: 3px solid purple
+  border: 3px solid purple;
+  height: 2.5vw;
+  margin-bottom: 10px;
 }
 
 #mainContainer {
   border: 3px solid green;
-
 }
 
 #logContainer {
-  border: 3px solid blue
+  border: 3px solid blue;
+  height: 37.5vw;
+}
+
+#mapContainer {
+  border: 3px solid red;
+  height: 37.5vw;
 }
