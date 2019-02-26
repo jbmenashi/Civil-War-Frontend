@@ -18,3 +18,5 @@ const MainContainer = () => {
 }
 
 export default MainContainer;
+
+// display Info component if event is selected (that's the modal)

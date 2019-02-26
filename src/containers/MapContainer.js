@@ -1,8 +1,11 @@
 import React from 'react';
+import Map from '../components/Map'
 
 const MapContainer = () => {
   return (
-    <div id="mapContainer"></div>
+    <div id="mapContainer">
+      <Map/>
+    </div>
   );
 }
 
