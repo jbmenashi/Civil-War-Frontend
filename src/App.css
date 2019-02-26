@@ -1,6 +1,12 @@
+body {
+  background-color: #f2ebde;
+}
+
 .App {
   text-align: center;
 }
+
+/* TITLE */
 
 #titleDiv {
   margin-top: 0.5vw;
@@ -10,6 +16,8 @@
 #title {
   font-size: 3vw
 }
+
+/* CONTAINERS */
 
 #sliderContainer {
   border: 3px solid purple;
@@ -30,3 +38,15 @@
   border: 3px solid red;
   height: 37.5vw;
 }
+
+/* SLIDER */
+
+.slider {
+  text-align: left
+}
+
+/* MAP */
+
+/* LOG */
+
+/* INFO */
