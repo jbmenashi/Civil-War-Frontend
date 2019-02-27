@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import { Slider, Rail, Handles, Tracks } from 'react-compound-slider'
 import Handle from './Handle'
 import Track from './Track'
+
+const mapStateToProps = state => {
+  return {
+    sliderValue: state.slider.sliderValue
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    slide: (value) => dispatch({type: "SLIDE", payload: value})
+  }
+}
 
 class Slidey extends Component {
 
@@ -17,7 +30,7 @@ class Slidey extends Component {
           <Handles>
             {({ handles, getHandleProps }) => (
               <div className="slider-handles">
-                {handles.map(handle => (<Handle key={handle.id} handle={handle} getHandleProps={getHandleProps}/>))}
+                {handles.map(handle => (<Handle key={handle.id} onChange={this.props.slide(handle.value)} handle={handle} getHandleProps={getHandleProps}/>))}
               </div>
             )}
           </Handles>
@@ -35,4 +48,4 @@ class Slidey extends Component {
 
 }
 
-export default Slidey;
+export default connect(mapStateToProps, mapDispatchToProps)(Slidey);
