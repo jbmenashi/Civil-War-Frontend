@@ -45,6 +45,10 @@ button {
 
 /* SLIDER */
 
+.btn-group {
+  right: 100px;
+}
+
 .sliderStyle {
   width: 100%;
   height: 35px;
@@ -55,7 +59,7 @@ button {
   width: 100%;
   height: 10px;
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 5px;
   background-color: #7B807A
 }
@@ -63,7 +67,6 @@ button {
 .handleStyle {
   position: absolute;
   margin-left: 25px;
-  margin-top: 11px;
   z-index: 2;
   width: 30px;
   height: 30px;
@@ -79,7 +82,7 @@ button {
   position: absolute;
   height: 10px;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 30px;
   background-color: #2C415C;
   border-radius: 5px;
