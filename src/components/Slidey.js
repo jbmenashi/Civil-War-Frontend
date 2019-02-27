@@ -18,10 +18,14 @@ const mapDispatchToProps = dispatch => {
 
 class Slidey extends Component {
 
+  onUpdate = values => {
+    this.props.slide(values[0])
+  }
+
   render() {
     return (
       <div className="slider">
-        <Slider className="sliderStyle" domain={[0, 1000]} step={1} mode={2} values={[0]}>
+        <Slider className="sliderStyle" domain={[0, 1000]} step={1} mode={2} values={[0]} onUpdate={this.onUpdate}>
           <Rail>
            {({ getRailProps }) => (
              <div className="railStyle" {...getRailProps()} />
@@ -30,7 +34,7 @@ class Slidey extends Component {
           <Handles>
             {({ handles, getHandleProps }) => (
               <div className="slider-handles">
-                {handles.map(handle => (<Handle key={handle.id} onChange={this.props.slide(handle.value)} handle={handle} getHandleProps={getHandleProps}/>))}
+                {handles.map(handle => (<Handle key={handle.id} handle={handle} getHandleProps={getHandleProps}/>))}
               </div>
             )}
           </Handles>
