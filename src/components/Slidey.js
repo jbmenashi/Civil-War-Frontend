@@ -25,7 +25,7 @@ class Slidey extends Component {
   render() {
     return (
       <div className="slider">
-        <Slider className="sliderStyle" domain={[0, 10]} step={1} mode={2} values={[this.props.sliderValue]} onUpdate={this.onUpdate}>
+        <Slider className="sliderStyle" domain={[1, 5]} step={1} mode={2} values={[this.props.sliderValue]} onUpdate={this.onUpdate}>
           <Rail>
            {({ getRailProps }) => (
              <div className="railStyle" {...getRailProps()} />
