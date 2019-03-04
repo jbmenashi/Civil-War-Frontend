@@ -6,13 +6,13 @@ import Track from './Track'
 
 const mapStateToProps = state => {
   return {
-    sliderValue: state.slider.sliderValue
+    sliderValue: state.slider.sliderValue,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    slide: (value) => dispatch({type: "SLIDE", payload: value})
+    slide: (value) => dispatch({type: "SLIDE", payload: value}),
   }
 }
 
