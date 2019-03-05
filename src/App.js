@@ -18,10 +18,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     loadDays: (days) => dispatch({type: 'LOAD_DAYS', payload: days}),
-    setActiveDay: (day) => dispatch({type: 'SET_ACTIVE_DAY', payload: day}),
+    setCurrentDay: (day) => dispatch({type: 'SET_CURRENT_DAY', payload: day}),
     setActiveCircles: (circles) => dispatch({type: 'SET_ACTIVE_CIRCLES', payload: circles}),
-    setActivePinpoints: (pinpoints) => dispatch({type: 'SET_ACTIVE_PINPOINTS', payload: pinpoints}),
-    setDailyEvents: (events) => dispatch({type: 'SET_DAILY_EVENTS', payload: events})
+    setActivePinpoints: (pinpoints) => dispatch({type: 'SET_ACTIVE_PINPOINTS', payload: pinpoints})
   }
 }
 
@@ -32,10 +31,21 @@ class App extends Component {
     .then(res => res.json())
     .then(data => {
       this.props.loadDays(data)
+      let foundDay = this.props.days.find(day => day.slider_id === this.props.sliderValue)
+      this.props.setCurrentDay(foundDay)
+      this.props.setActiveCircles(foundDay.circles)
+      this.props.setActivePinpoints(foundDay.pinpoints)
     })
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.sliderValue !== this.props.sliderValue) {
+      this.props.setCurrentDay(this.props.days.find(day => day.slider_id === this.props.sliderValue))
+    }
+  }
+
   render() {
+    console.log(this.props.currentDay);
     return (
       <div className="App">
         <div id="titleDiv">

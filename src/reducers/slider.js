@@ -1,5 +1,5 @@
 const initialState = {
-  sliderValue: 0
+  sliderValue: 1
 }
 
 export default (state = initialState, action) => {

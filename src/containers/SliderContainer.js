@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     advance: () => dispatch({type: "ADVANCE"}),
-    retreat: () => dispatch({type: "RETREAT"})
+    retreat: () => dispatch({type: "RETREAT"}),
   }
 }
 
