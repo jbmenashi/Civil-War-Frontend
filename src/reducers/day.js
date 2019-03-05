@@ -1,6 +1,6 @@
 const initialState = {
   days: [],
-  currentDay: null
+  currentDay: ''
 }
 
 export default (state = initialState, action) => {

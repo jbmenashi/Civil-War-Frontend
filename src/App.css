@@ -5,7 +5,7 @@ body {
 button {
   background-color: black;
   color: white;
-  font-family: 'Felipa', cursive;
+  font-family: 'Courgette', cursive;
 }
 
 .App {
@@ -16,7 +16,7 @@ button {
 
 #titleDiv {
   margin-top: 0.5vw;
-  font-family: 'Felipa', cursive;
+  font-family: 'Courgette', cursive;
 }
 
 #title {
@@ -36,6 +36,8 @@ button {
 #logContainer {
   border: 3px solid blue;
   height: 37.5vw;
+  font-family: 'Courgette', cursive;
+  padding: 1vw
 }
 
 #mapContainer {
@@ -94,5 +96,7 @@ button {
 /* MAP */
 
 /* LOG */
+
+
 
 /* INFO */
