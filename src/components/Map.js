@@ -11,22 +11,19 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    
-  }
-}
-
 class Map extends Component {
 
   render() {
     return (
       <div>
-      Map
+        {this.props.dailyEvents.map(e => <p key={e.id}>{e.title}</p>)}
+        {this.props.activeCircles.map(circle => <p key={circle.id}>{circle.lat}</p>)}
+        {this.props.subjects.map(subject => <p key={subject.id}>{subject.title}</p>)}
+        {this.props.activePinpoints.map(pinpoint => <p key={pinpoint.id}>{pinpoint.lat}</p>)}
       </div>
     );
   }
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Map);
+export default connect(mapStateToProps)(Map);
