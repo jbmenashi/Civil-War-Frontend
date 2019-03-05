@@ -21,7 +21,9 @@ class SliderContainer extends Component {
 
   play = () => intervalId = setInterval(this.props.advance, 1000);
 
-  pause = () => clearInterval(intervalId);
+  pause = () => {
+    clearInterval(intervalId);
+  }
 
   advance = () => {
     clearInterval(intervalId);

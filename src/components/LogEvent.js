@@ -4,7 +4,9 @@ class LogEvent extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+      {this.props.title}
+      </div>
     );
   }
 
