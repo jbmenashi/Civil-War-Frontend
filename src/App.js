@@ -47,7 +47,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.sliderValue !== this.props.sliderValue) {
+    if (prevProps.sliderValue !== this.props.sliderValue && this.props.sliderValue <= this.props.days.length && this.props.sliderValue > 0) {
       this.changeDay(this.props.days.find(day => day.slider_id === this.props.sliderValue))
     }
   }
