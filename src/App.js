@@ -26,21 +26,24 @@ const mapDispatchToProps = dispatch => {
 
 class App extends Component {
 
+  changeDay = day => {
+    this.props.setCurrentDay(day)
+    this.props.setActiveCircles(day.circles)
+    this.props.setActivePinpoints(day.pinpoints)
+  }
+
   componentDidMount() {
     fetch('http://localhost:3000/api/v1/days')
     .then(res => res.json())
     .then(data => {
       this.props.loadDays(data)
-      let foundDay = this.props.days.find(day => day.slider_id === this.props.sliderValue)
-      this.props.setCurrentDay(foundDay)
-      this.props.setActiveCircles(foundDay.circles)
-      this.props.setActivePinpoints(foundDay.pinpoints)
+      this.changeDay(this.props.days.find(day => day.slider_id === this.props.sliderValue))
     })
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.sliderValue !== this.props.sliderValue) {
-      this.props.setCurrentDay(this.props.days.find(day => day.slider_id === this.props.sliderValue))
+      this.changeDay(this.props.days.find(day => day.slider_id === this.props.sliderValue))
     }
   }
 
