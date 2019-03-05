@@ -4,6 +4,7 @@ import day from './day'
 import event from './event'
 import circle from './circle'
 import pinpoint from './pinpoint'
+import subject from './subject'
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
   day,
   event,
   circle,
-  pinpoint
+  pinpoint,
+  subject
 })
 
 export default rootReducer

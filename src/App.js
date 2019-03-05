@@ -11,6 +11,7 @@ const mapStateToProps = state => {
     currentDay: state.day.currentDay,
     activeCircles: state.circle.activeCircles,
     activePinpoints: state.pinpoint.activePinpoints,
+    subjects: state.subject.subjects,
     dailyEvents: state.event.dailyEvents
   }
 }
@@ -18,9 +19,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     loadDays: (days) => dispatch({type: 'LOAD_DAYS', payload: days}),
+    loadSubjects: (subjects) => dispatch({type: 'LOAD_SUBJECTS', payload: subjects}),
     setCurrentDay: (day) => dispatch({type: 'SET_CURRENT_DAY', payload: day}),
     setActiveCircles: (circles) => dispatch({type: 'SET_ACTIVE_CIRCLES', payload: circles}),
-    setActivePinpoints: (pinpoints) => dispatch({type: 'SET_ACTIVE_PINPOINTS', payload: pinpoints})
+    setActivePinpoints: (pinpoints) => dispatch({type: 'SET_ACTIVE_PINPOINTS', payload: pinpoints}),
+    setDailyEvents: (events) => dispatch({type: 'SET_DAILY_EVENTS', payload: events})
   }
 }
 
@@ -30,6 +33,8 @@ class App extends Component {
     this.props.setCurrentDay(day)
     this.props.setActiveCircles(day.circles)
     this.props.setActivePinpoints(day.pinpoints)
+    this.props.setDailyEvents(day.events)
+    this.props.loadSubjects(day.subjects)
   }
 
   componentDidMount() {
