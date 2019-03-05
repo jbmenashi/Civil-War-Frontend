@@ -45,7 +45,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.currentDay);
     return (
       <div className="App">
         <div id="titleDiv">
