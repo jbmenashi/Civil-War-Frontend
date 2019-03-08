@@ -25,7 +25,6 @@ class Log extends PureComponent {
   }
 
   logEvents = events => {
-    console.log(events.filter(event => event.days.every(day => day.slider_id <= this.props.sliderValue)).reverse());
     return events.filter(event => event.days.every(day => day.slider_id <= this.props.sliderValue)).reverse()
   }
 

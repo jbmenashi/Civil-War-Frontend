@@ -101,5 +101,20 @@ button {
   color: red
 }
 
+.logEvent:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-dialog {
+  color: #2C415C;
+  background-color: #7B807A;
+  margin: 15vw 35vw;
+}
+
+.modal-header {
+  border: none;
+}
+
 
 /* INFO */
