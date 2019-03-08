@@ -116,5 +116,9 @@ button {
   border: none;
 }
 
+.modal-title {
+  text-align: center
+}
+
 
 /* INFO */
