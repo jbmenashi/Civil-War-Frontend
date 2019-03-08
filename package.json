@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "leaflet": "^1.4.0",
+    "mapbox-gl": "^0.53.1",
     "react": "^16.8.3",
     "react-compound-slider": "^1.1.0",
     "react-dom": "^16.8.3",
+    "react-leaflet": "^2.2.1",
+    "react-map-gl": "^4.0.14",
     "react-redux": "^6.0.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1"

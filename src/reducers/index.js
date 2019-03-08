@@ -6,6 +6,7 @@ import circle from './circle'
 import pinpoint from './pinpoint'
 import subject from './subject'
 import log from './log'
+import map from './map'
 
 
 const rootReducer = combineReducers({
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   circle,
   pinpoint,
   subject,
-  log
+  log,
+  map
 })
 
 export default rootReducer

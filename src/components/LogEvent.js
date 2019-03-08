@@ -19,7 +19,6 @@ class LogEvent extends Component {
 
 
   render() {
-    console.log(this.props);
     return (
       <>
       <div className="logEvent" data-toggle="modal" data-target="#infoModal" onClick={() => this.props.selectLogEvent(this.props.title, this.props.info, this.props.link)}>
