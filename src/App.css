@@ -104,6 +104,10 @@ button {
 
 /* MAP */
 
+#map {
+  height: 100%
+}
+
 /* LOG */
 
 .firstLogEvent {
