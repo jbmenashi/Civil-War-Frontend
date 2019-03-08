@@ -30,19 +30,28 @@ button {
 }
 
 #mainContainer {
-  border: 3px solid green;
+  background-color: #2C415C;
+  border-radius: 15px;
 }
 
 #logContainer {
-  border: 3px solid blue;
+  background-color: #f2ebde;
+  border-radius: 15px;
   height: 37.5vw;
   font-family: 'Courgette', cursive;
-  padding: 1vw
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
 }
 
 #mapContainer {
-  border: 3px solid red;
+  background-color: #f2ebde;
+  border-radius: 15px;
   height: 37.5vw;
+  font-family: 'Courgette', cursive;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
 }
 
 /* SLIDER */
@@ -108,8 +117,12 @@ button {
 
 .modal-dialog {
   color: #2C415C;
-  background-color: #7B807A;
   margin: 15vw 35vw;
+}
+
+.modal-content {
+  background-color: #f2ebde;
+  border-radius: 15px;
 }
 
 .modal-header {
