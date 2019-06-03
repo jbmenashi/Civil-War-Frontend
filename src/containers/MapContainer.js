@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { ZoomControl } from "react-mapbox-gl";
 
 const Map = ReactMapboxGl({
-  accessToken: "pk.eyJ1IjoiamJtZW5hc2hpIiwiYSI6ImNqcWZxc2tpaDJ2MGc0M3FxdWxrdTF2eGUifQ.FVh60f1zW4orYek2_IjsKA"
+  accessToken: "pk.eyJ1IjoiamJtZW5hc2hpIiwiYSI6ImNqcWZyYXFvZTU1ejg0MmxnNXQxaHZwYTMifQ.Uvhck3cxhndzZdytkylSPw"
 });
 
 class mapContainer extends Component {
@@ -17,8 +17,8 @@ class mapContainer extends Component {
           center={center}
           zoom={zoom}
           containerStyle={{
-            height: "77vh",
-            width: "143vw",
+            height: "575px",
+            width: "2197px",
             left: "-72vw",
             margin: "1vw",
           }}>
